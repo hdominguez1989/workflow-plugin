@@ -34,6 +34,18 @@
     <packaging>hpi</packaging>
     <name>Workflow: Basic Steps</name>
     <url>https://wiki.jenkins-ci.org/display/JENKINS/Workflow+Plugin</url>
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -51,6 +63,16 @@
             <version>${project.version}</version>
             <classifier>tests</classifier>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.nirima</groupId>
+            <artifactId>docker-plugin</artifactId>
+            <version>0.9.5-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>workflow-job</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
